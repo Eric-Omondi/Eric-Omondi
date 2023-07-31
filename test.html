@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="pi" id="pi">
+        3.142
+    </div>
+    <div class="r" id="r">
+        77
+    </div>
+    <div class="total" id="total">
+        <script>
+            let pi = document.getElementById("pi").innerText;
+            let r = document.getElementById("r").innerText;
+            let area = Number(pi) * Number(r) * Number(r);
+            document.getElementById("total").innerText = area;
+        </script>
+
+    </div>
+</body>
+</html>

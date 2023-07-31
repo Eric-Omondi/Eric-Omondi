@@ -25,12 +25,13 @@
     <div id="el-one" class="el-one">30</div>
     <div id="el-two" class="el-two">50</div>
     <div id="el-three" class="el-three">50</div>
+   
 
     <script>
-      let x = document.getElementById("el-one").innerHTML;
-      let y = document.getElementById("el-two").innerHTML;
+      let x = document.getElementById("el-one").innerText;
+      let y = document.getElementById("el-two").innerText;
       let z = x + y;
-      document.getElementById("el-three").innerHTML=z
+      document.getElementById("el-three").innerText=z
       console.log(z);
     </script>
   </body>

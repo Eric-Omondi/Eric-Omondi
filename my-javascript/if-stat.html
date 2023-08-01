@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Jva-script if</h1>
+    <h2>A weather forecast</h2>
+    <p id="forecastmes"></p>
+
+    <!-- <script>
+      temprature = 16;
+      let greeting;
+
+      if (temprature < 15) {
+        greeting = "It's cold waer a sweater";
+      } else if (temprature < 30) {
+        greeting = "The waetaher is good, enjoy your day";
+      } else {
+        greeting = "It's hot, make sure you dehydrate";
+      }
+      document.getElementById("forecastmes").innerHTML = greeting;
+      // console.log(document.getElementById("forecastmes"));
+    </script> -->
+
+    <!-- <script>
+      let temprature = 31;
+      let message;
+      if (temprature < 15) {
+        console.log("It's cold");
+      } else if (temprature < 23) {
+        console.log("Its a good day");
+      } else {
+        console.log("It's hot, stay dehydrate");
+      }
+      document.getElementById("forecastmes").innerHTML = message;
+    </script> -->
+
+    <script>
+      let temprature = 31;
+      const is_hot = temprature > 30;
+      const is_cold = temprature < 15 
+      
+      if (is_cold) {
+        console.log("It's freezing, wear sweaters")
+      } else if (is_hot) {
+        console.log("It's hot stay dehydrated")
+      } else {
+        console.log("It's warm")
+        
+      }
+      document.getElementById("forecastmes").innerHTML = greet;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My-JavaScript</title>
+  </head>
+  <body>
+    <p id="text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem explicabo,
+      dolores ab consectetur id reprehenderit, maxime modi tempore deleniti
+      blanditiis quas repellendus rem? Praesentium, atque? Itaque voluptatum
+      expedita iste cum?
+    </p>
+    <button type="button" onclick="myFunction()">Shorten</button>
+    <script>
+      function myFunction() {
+        document.getElementById("text").innerHTML = "I am a web developer";
+      }
+    </script>
+    <br />
+    <br />
+    <img id="myImage" src="bulboff.jpg" />
+    <button type="button" onclick="getElementById('myImage').src='bulbon.jpg'">
+      Power On
+    </button>
+    <button type="button" onclick="getElementById('myImage').src='bulboff.jpg'">
+      Power Off
+    </button>
+
+    <button type="button" onclick="getElementById('myImage').src='bulbbright.png'">
+        Increase Brightness
+      </button>
+  </body>
+</html>

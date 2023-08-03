@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // <!-- check if a number is even or odd -->
+      let number = 6;
+
+      if (number % 2 == 0) {
+        console.log("Is even");
+      } else {
+        console.log("Is Odd");
+      }
+    </script>
+
+    <script>
+      // <!-- finding the largest number among three -->
+      let a = 800;
+      let b = 100;
+      let c = 10;
+
+      if (a > b && a > c) console.log("A = " + a + " is the greatest");
+      else if (c > a && c > b) console.log("C = " + c + " is the greatest");
+      else console.log("B = " + b + " is the greatest");
+    </script>
+
+    <script>
+      // <!--Create a variable called year and enter the a random year.
+      //    Check if the year is a leap year or not.
+      //    A leap year is a year that is divisible by 4,
+      //    except for years that are divisible by 100 but not by 400.
+      // -->
+      let year;
+      year = 2016;
+      
+      if (year % 4 == 0 && year % 100 != 0 &&  year % 400 != 0) {
+        console.log( year + " " + " Is a leap year");
+        // if (year % 100 == 0) {
+        //   console.log("It's divisible by 100");
+        // } else if (year % 400 == 0) {
+        //   console.log("It's divisible by 400");
+        // }
+      } else  {
+        console.log(year + " " + "Is not a leap year");
+      }
+
+      
+    </script>
+  </body>
+</html>

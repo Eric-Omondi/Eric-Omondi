@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         Assignment 1: Combine Arrays
+// Given two arrays arr1 and arr2, combine 
+// them into a single array combinedArray using 
+// the .concat() method. Then, remove the first 
+// element from combinedArray using the .shift() method. 
+// Finally, print the modified combinedArray.
+
+let arr1 = ["tesla", "bmw", "benz"];
+let arr2 = ["toyota", "isuzu", "suzuki"];
+let combinedArray = arr1.concat(arr2);
+console.log(combinedArray);
+let mod_combinedArray = combinedArray.shift([0])
+console.log( "removed element" + " " + mod_combinedArray)
+console.log(combinedArray)
+
+    </script>
+
+
+
+<script>
+//     Assignment 2: Extract Subarray
+// Given an array sourceArray, extract a 
+// subarray extractedArray from index 2 to index 4 
+// (end index not inclusive) using the .slice() method. 
+// Then, modify the extractedArray by replacing its 
+// elements with 'x', 'y', and 'z' using the .splice() method.
+//  Finally, print both the sourceArray and the modified extractedArray.
+
+let sourceArray = ["tesla", "bmw", "benz", "toyota", "isuzu", "suzuki"];
+console.log(sourceArray);
+let modArray = sourceArray.slice(2,5);
+console.log(modArray);
+modArray.splice(0, 3, "X", "Y", "Z");
+console.log(modArray);
+
+
+</script>
+</body>
+</html>

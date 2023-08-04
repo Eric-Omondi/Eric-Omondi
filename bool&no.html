@@ -20,11 +20,9 @@
 
       console.log(
         (
-            email.indexOf("@") > 0 && email.indexOf(".") > 0
-            ) &&
-       (
-        email.indexOf("gmail.com") > 0 || email.indexOf("outlook.com") > 0 || email.indexOf("mail.com") > 0 || email.indexOf("inbox.com") > 0
-        )
+            email.indexOf("@") > 0 && email.indexOf(".") > 0 && email.indexOf(".") - email.indexOf("@") > 1 && email.indexOf(".") + 1 != email.length
+            ) 
+      
         );
     </script>
 

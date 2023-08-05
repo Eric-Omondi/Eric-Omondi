@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Console log a boolean that checks if a number is between 0 and 100
+      let number = 500;
+
+      console.log(number >= 0 && number <= 100);
+
+      // using if statement
+
+      if (number > 0) {
+        if (number < 100) {
+          console.log("In the range");
+        } else {
+          console.log("Not in the range");
+        }
+      }
+
+      //  we basically did nesting here
+    </script>
+
+    <script>
+      // Console log a boolean that gives you true only when an email is a valid email. Do not use regular expressions.
+
+      let email = "eric@outlookco.m";
+
+      console.log(
+        email.indexOf("@") > 0 &&
+          email.indexOf(".") > 0 &&
+          email.indexOf(".") - email.indexOf("@") > 1 &&
+          email.indexOf(".") + 1 != email.length
+      );
+
+      // using if statement
+      if (email.indexOf("@") > 0) {
+        if (email.indexOf(".") - email.indexOf("@") > 1) {
+          if (email.indexOf(".") + 1 != email.length) {
+            console.log("its a valid email");
+          } else {
+            console.log(". cant be at the end");
+          }
+        } else {
+          console.log("@ comes before . and character between them");
+        }
+      } else {
+        console.log("misssing @");
+      }
+    </script>
+
+    <script>
+      //   Console log a boolean that gives you true only when a phone number
+      //   is a valid Kenyan phone number. If someone enters either
+      //    +254712345678, 254712345678, 0712345678 , 712345678, 0112345678, 112345678
+      //    it should be valid also
+
+      let p_number = "254706532884";
+      console.log(p_number.length);
+      console.log(
+        (p_number.substring(0, 4) === "+254" && p_number.length === 13) ||
+          (p_number.substring(0, 3) === "254" && p_number.length === 12) ||
+          ((p_number.substring(0, 2) === "07 " ||
+            p_number.substring(0, 2) === "01 ") &&
+            p_number.length === 10) ||
+          ((p_number.substring(0, 1) === "7 " ||
+            p_number.substring(0, 1) === "1 ") &&
+            p_number.length === 9)
+      );
+    </script>
+
+    <script>
+      // using if to solve the above
+      console.log("If statement");
+      let phone_no = "+254706532884";
+
+      if (phone_no.substring(0, 4) === "+254" && phone_no.length === 13) {
+        console.log("+254-Kenyan");
+      } else if (phone_no.substring(0, 3) === "254" && phone_no.length === 12) {
+        console.log("254-Kenyan");
+      } else if (
+        (phone_no.substring(0, 2) === "07" ||
+          phone_no.substring(0, 2) === "01") &&
+        phone_no.length === 10
+      ) {
+        console.log("01 and 07 Kenyan");
+      } else if (
+        (phone_no.substring(0, 1) === "1" ||
+          phone_no.substring(0, 1) === "7") &&
+        phone_no.length === 9
+      ) {
+        console.log("1 and 7 Kenyan");
+      } else {
+        console.log("Not Kenyan");
+      }
+    </script>
+  </body>
+</html>

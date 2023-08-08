@@ -7,21 +7,13 @@
   </head>
   <body>
     <p id="text_dis"></p>
-    <script>
+    <!-- <script>
       // Create a file called mylooptask.html.
       // console.log numbers that are only divisible
       // by 5 and 7  and between 0 to 500.
       // The output should be 35, 70, 105…..
       // Hint: Use For loop and IF statements
-      // let i = 0;
-      // if (i > 0 && i < 500) {
-      //   let text = "";
-      //   for (i = 35; i < 500; i = i + 35) {
-      //     text += "Number is " + i + "<br>";
-      //     console.log(text);
-      //     i < 500;
-      //   }
-      // }
+      
 
       let N = 500;
       let text = " ";
@@ -33,6 +25,63 @@
         }
       }
       document.getElementById("text_dis").innerHTML = text;
+    </script> -->
+
+    <!-- <script>
+      let N = 80;
+      let text = " ";
+      for (let num = 0; num < N; num++) {
+        if (num > 20 && num < 80) {
+          text += num + ",";
+          console.log(text);
+        }
+      }
+      array1 = [text]
+
+      let E = 80;
+      let text2 = " ";
+      for (let num = 0; num < E; num++) {
+        if (num > 20 && num < 80 && num % 7 == 0) {
+          text2 += num + ",";
+          console.log(text2);
+        }
+      }
+      array2= [text2]
+
+      comb_array = array1.concat(array2)
+      console.log(comb_array)
+    </script> -->
+    <script>
+      let text = " ";
+      for (i = 20; i < 80; i++) {
+        text += i + ",";
+        array1 = [text];
+      }
+      console.log(array1)
+
+      let E = 80;
+      let text2 = " ";
+      for (let num = 0; num < 80; num++) {
+        if ( num % 7 == 0) {
+          text2 += num + ",";
+          array2 = [text2];
+        }
+      }
+      console.log(array2)
+      comb_array = array.concat(array2)
+    </script>
+
+    <script>
+      let mynums = [];
+
+      for (let i = 20; i < 80; i++) {
+        if (i % 7 == 0) {
+          mynums.push(i);
+         
+        }
+        
+      }
+      console.log(mynums);
     </script>
   </body>
 </html>

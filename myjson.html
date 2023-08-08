@@ -15,30 +15,40 @@
     <script>
       // when an array is to big accesing data using index is imposible
       // Json objexts stores values in unique keys
-      let myobj =  { name: "John", age: 30, car: null };
+      let myobj = { name: "John", age: 30, car: null };
       console.log(myobj);
       console.log(myobj["age"]);
 
-
-
       let students = {
-        "pp1": ["John", "Moha", "Kendy"],
-        "pp2": ["Mike", "Ann", "Jay"]
+        pp1: ["John", "Moha", "Kendy"],
+        pp2: ["Mike", "Ann", "Jay"],
       };
-      console.log(students["pp2"][1])
+      console.log(students["pp2"][1]);
     </script>
 
     <script>
-
-        // let reg_details = {
-        //     "name":["William", "Samoe", "Ruto"],
-        //     "county" : ["mombasa", "Nairobi", "Nakuru"],
-        //     "sub_county": ["Nyali", "Embakasi", "Kibogo"],
-        //     "ward": ["kabichu", "leton", "karakata"]
-        // }
-        //    console.log(reg_details["name"][0],["county"][0])
-
-
+      // console log a json object that carries voters details
+      let voters_details = {
+        40454830: {
+          name: "ken",
+          county: "Nairobi",
+          sub_county: "Nairobi East",
+          ward: "kamulu",
+        },
+        40464830: {
+          name: "Juma",
+          county: "Kisumu",
+          sub_county: "Kisumu West",
+          ward: "kamote",
+        },
+        40474830: {
+          name: "Musa",
+          county: "Eldoret",
+          sub_county: "Kinang'op",
+          ward: "bujuru",
+        },
+      };
+      console.log(voters_details)
     </script>
   </body>
 </html>

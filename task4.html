@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="email"></div>
+    <script>
+      let email = prompt("Enter you email");
+      if (email.indexOf("@") > 0 && email.indexOf(".") > 0) {
+        document.getElementById("email").innerHTML = email;
+      } else {
+        document.getElementById("email").innerHTML = "Not a valid email";
+      }
+    </script>
+  </body>
+</html>

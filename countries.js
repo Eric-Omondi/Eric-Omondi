@@ -1,4 +1,4 @@
- contries = [
+ countries = [
     {
         "country": "Afghanistan",
         "population": 37172386

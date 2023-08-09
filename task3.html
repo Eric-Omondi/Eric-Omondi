@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="p_no"></div>
+    <script>
+      let phone_no = prompt("Enter Number");
+
+      if (phone_no.substring(0, 4) === "+254" && phone_no.length === 13) {
+        document.getElementById("p_no").innerHTML = phone_no;
+      } else if (phone_no.substring(0, 3) === "254" && phone_no.length === 12) {
+        document.getElementById("p_no").innerHTML = "+" + phone_no;
+      } else if (
+        (phone_no.substring(0, 2) === "07" ||
+          phone_no.substring(0, 2) === "01") &&
+        phone_no.length === 10
+      ) {
+        document.getElementById("p_no").innerHTML =
+          "+254" + phone_no.substring(1, 10);
+      } else if (
+        (phone_no.substring(0, 1) === "1" ||
+          phone_no.substring(0, 1) === "7") &&
+        phone_no.length === 9
+      ) {
+        document.getElementById("p_no").innerHTML = "+254" + phone_no;
+      } else {
+        document.getElementById("p_no").innerHTML = "Not a valid no";
+      }
+    </script>
+  </body>
+</html>

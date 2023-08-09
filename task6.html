@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+      </head>
+      <body>
+        <div id="pass_validater"></div>
+        <script>
+          //   for (i = 4; i > 0; i--) {
+          //     let password = prompt("Enter Password");
+          //     if (password != "admin@123") {
+          //       alert("Password dont match! Try again!");
+          //     } else if ((i == 0)) {
+          //       alert("No more tries left");
+          //     } else {
+          //       alert("You may enter");
+          //     }
+          //   }
+          for (i = 3; i > 0; i--) {
+            let password = prompt("enter your password");
+            // if it's correct it alerts and breaks
+            if (password === "admin@123") {
+              alert("You may enter");
+              break;
+            } //   if it's not and the tries have elapsed, then it alerts
+            else if (i == 1) {
+              alert("No more tries left");
+            } //   if its not but the ries have not elapsed
+            else {
+              alert("try again");
+            }
+          }
+        </script>
+      </body>
+    </html>
+  </body>
+</html>

@@ -6,7 +6,43 @@
     <title>Document</title>
   </head>
   <body>
- <script src="countries.js"></script>
- 
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <script src="countries.js"></script>
+    <script>
+      // console.log(countries)
+      let pop_range = {
+        "0_50": [],
+        "50>": [],
+        "100>": [],
+      };
+      for (let i = 0; i < countries.length; i++) {
+        if (countries[i].population <= 50000000) {
+          pop_range["0_50"].push(countries[i].population);
+        } else if (
+          countries[i].population > 50000000 &&
+          countries[i].population < 100000000
+        ) {
+          pop_range["50>"].push(countries[i].population);
+        } else {
+          pop_range["100>"].push(countries[i].population);
+        }
+      }
+      // console.log(pop_range["0_50"].length);
+      // console.log(pop_range["50>"].length);
+      // console.log(pop_range["100>"].length);
+      let text = " Below 50M are: ";
+      text += pop_range["0_50"].length;
+      document.getElementById("result1").innerHTML = text;
+
+      let text2 = "Above 50M and below 100M are: ";
+      text += pop_range["50>"].length;
+      document.getElementById("result2").innerHTML = text2;
+      
+      let text3 = "Above 100M: ";
+      text += pop_range["100>"].length;
+      document.getElementById("result3").innerHTML = text3;
+    </script>
   </body>
 </html>

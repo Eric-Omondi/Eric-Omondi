@@ -8,6 +8,10 @@
   <body>
     <div id="email"></div>
     <script>
+      // Write a program which accepts email as form input or from terminal.
+      //  Validate the email by checking if it's a valid email.
+      // Hint: Check if it contains an “@” symbol and “.” symbol.
+
       let email = prompt("Enter you email");
       if (email.indexOf("@") > 0 && email.indexOf(".") > 0) {
         document.getElementById("email").innerHTML = email;

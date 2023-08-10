@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="total"></p>
+    <script>
+      // Write a program that calculates the
+      //   total stock in a company from the
+      //   array/list below if we know that the \
+      //   stock is the last digit in every array/list.
+
+      prods = [
+        ["omo", "30kshs", "300"],
+        ["milk", "50kshs", "200"],
+        ["bread", "45kshs", "359"],
+        ["coffee", "5kshs", "79"],
+      ];
+      //   console.log(prods[2][2]);
+      let total_stock = 0;
+      for (i = 0; i < prods.length; i++) {
+        stock = prods[i][2];
+        stock_int = parseInt(stock);
+        total_stock += stock_int;
+      }
+      document.getElementById("total").innerHTML =
+        "The total stock is" + " " + total_stock;
+    </script>
+  </body>
+</html>

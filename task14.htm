@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Write a program that takes input of 2 values
+      //  and adds them. The program should only accept
+      //   numbers and floats only or otherwise display an
+      //   error “invalid character entered” and take the
+      //    user to re-enter the inputs .
+
+      let num1 = prompt("Enter the first number");
+      let num2 = prompt("Enter the second number");
+
+      if (parseInt(num1) === num1 && parseInt(num2) === num2) {
+        parseInt(num1) + parseInt(num2);
+        total = num1 + num2;
+        alert("The total is: " + total);
+      } else if (parseInt(num1) !== num1 && parseInt(num2) !== num2) {
+        total = num1 + num2;
+        alert("The total is: " + total);
+      } else {
+        alert("Invalid characters");
+      }
+    </script>
+  </body>
+</html>

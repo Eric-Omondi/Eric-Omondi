@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="nhif.js"></script>
+    <script>
+      // task16
+      // Continue with the program in task15.html,
+      // then use  the gross salary to find the NSSF.
+      // To find the Kenya NSSF Rate using. Compute NSSF using 6% of the Gross Salary.
+      //  BUT ONLY A MAXIMUM OF 18,000 CAN BE USED IN NSSF.
+    //   nssf_rate = 0.06;
+
+      nssf_pay = gross_salary * 0.06;
+      if (nssf_pay > 0 && nssf_pay <= 18000) {
+        nssf_pay = gross_salary * 0.06;
+      } else {
+        nssf_pay = 18000;
+      }
+       console.log("this is: "+ nssf_pay)
+    </script>
+
+   
+    
+  </body>
+</html>

@@ -30,6 +30,34 @@
           alert("Invalid username or password");
         }
       }
+
+
+      // Other solution
+      
+      let email = "admin@mail.com";
+      let password = "Admin@123";
+
+      for (i = 1; i <= 4; i++) {
+        let user_email = prompt(
+          "Enter email " + "Attempt " + i.toString() + " of 3"
+        );
+        let user_password = prompt(
+          "Enter Password " + "Atempt " + i.toString() + " of 3"
+        );
+        
+
+        if (i == 4) {
+          alert("Blocked contact Admin");
+        }
+
+        if (user_email == email && user_password == password) {
+          alert("Acces granted");
+          break;
+        } else {
+          alert("Acces Denied. Try again!");
+        }
+      }
+    
     </script>
   </body>
 </html>

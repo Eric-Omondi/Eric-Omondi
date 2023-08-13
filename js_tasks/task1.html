@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="area" id="area"></div>
+    <script>
+      // Write a program that prompts the user to enter the base and height of a triangle and returns its area.
+      // It also checks to make sure the value of the base and height entered is  not a string
+
+      let base = Number(prompt("enter base"));
+      let height = Number(prompt("enter height"));
+
+      // if (parseInt(base) !== base || parseFloat(base) !== base) {
+      //   alert("Invalid base");
+      // } else if (parseFloat(height) !== height || parseInt(height) !== height) {
+      //   alert("Invalid height");
+      // } else
+      if (
+        (parseInt(base) !== base || parseInt(height) !== height) &&
+        (parseFloat(height) !== height || parseFloat(base) !== base)
+      ) {
+        alert("Invalid base or height");
+      } else {
+        let area = 0.5 * Number(base) * Number(height);
+        document.getElementById("area").innerHTML =
+          "Height: " +
+          height +
+          "<br>" +
+          "Base: " +
+          base +
+          "<br>" +
+          "The area of the triangle is: " +
+          area;
+      }
+
+      // let area = 0.5 * Number(base) * Number(height);
+      // document.getElementById("area").innerHTML = area;
+    </script>
+  </body>
+</html>

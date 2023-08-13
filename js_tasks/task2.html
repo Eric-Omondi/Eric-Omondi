@@ -14,16 +14,20 @@
       //  Hint: how does an even / odd number react differently when divided by 2?
       // If the number is a multiple of 4, print out “divisible by 4”.
 
+      let number = Number(prompt("Enter Number"));
 
-      let number = prompt("Enter Number");
-      if (number % 2 === 0) {
-        if (number % 4 === 0) {
-          document.getElementById("result").innerHTML = "divisible by 4";
+      if (parseInt(number) === number) {
+        if (number % 2 === 0) {
+          if (number % 4 === 0) {
+            document.getElementById("result").innerHTML = "divisible by 4";
+          } else {
+            document.getElementById("result").innerHTML = "Even";
+          }
         } else {
-          document.getElementById("result").innerHTML = "Even";
+          document.getElementById("result").innerHTML = "Odd";
         }
       } else {
-        document.getElementById("result").innerHTML = "Odd";
+        alert("Invalid charcters entered")
       }
     </script>
   </body>

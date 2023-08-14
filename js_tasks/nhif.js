@@ -36,15 +36,13 @@ if (gross_salary == 5999) {
   nhif = 1700;
 }
 let net_salary = gross_salary - nhif;
-//   document.getElementById("net_salary").innerHTML =
-//     "The net salary is:" + " " + net_salary;
+
 
 // task16
 // Continue with the program in task15.html,
 // then use  the gross salary to find the NSSF.
 // To find the Kenya NSSF Rate using. Compute NSSF using 6% of the Gross Salary.
 //  BUT ONLY A MAXIMUM OF 18,000 CAN BE USED IN NSSF.
-
 
 nssf_pay = gross_salary * 0.06;
 if (nssf_pay > 0 && nssf_pay <= 18000) {
@@ -61,5 +59,8 @@ let nhdf;
 //   we set the rate of the National Housing Development fund
 let nhdf_rate = 0.015;
 nhdf = gross_salary * nhdf_rate;
-//   alert(nhdf);
 
+
+// Calculate the taxable income.
+// i.e taxable_income = gross salary - (NSSF + NHDF)
+taxableIncome = gross_salary - (nssf_pay + nhdf);

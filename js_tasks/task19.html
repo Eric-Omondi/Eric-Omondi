@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- countinue with the same program 
+        and find a persons PAYEE using the
+         taxable income above -->
+    <script src="nhif.js"></script>
+    <script>
+      // let grossPayee = paye(%) * taxableIncome
+      // let grossPayee = paye(%) * taxableIncome
+      let grossPayee;
+      let personalRelief = 2400;
+      let insuranceReleif = 0.15 * nhif;
+      let taxReliefs = insuranceReleif + personalRelief;
+    
+      if (taxableIncome === 24001) {
+        grossPayee = 0.1 * taxableIncome;
+        netPayee = grossPayee - taxReliefs;
+      } else if (taxableIncome > 24001 && taxableIncome <= 32333) {
+        grossPayee = 0.25 * taxableIncome;
+        netPayee = grossPayee - taxReliefs;
+      } else if (taxableIncome > 32333 && taxableIncome <= 500000) {
+        grossPayee = 0.3 * taxableIncome;
+        netPayee = grossPayee - taxReliefs;
+      } else if (taxableIncome > 500000 && taxableIncome <= 800000) {
+        grossPayee = 0.325 * taxableIncome;
+        netPayee = grossPayee - taxReliefs;
+      } else if (taxableIncome > 800000){
+       grossPayee = 0.25 * taxableIncome;
+        netPayee = grossPayee - taxReliefs;
+      } else{
+        netPayee = 0
+      }
+
+      console.log("The taxable is: "+ taxableIncome + "<br>" + "The net payee is: "+ netPayee)
+    </script>
+  </body>
+</html>

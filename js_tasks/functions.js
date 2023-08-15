@@ -55,9 +55,9 @@ function findnhif(basicSalary, benefits) {
   return nhif;
 }
 
-// A variable that stores the return value of  findnhif() function
+// // A variable that stores the return value of  findnhif() function
 
-let calcNhif = findnhif(basicSalary, benefits);
+// let calcNhif = findnhif(basicSalary, benefits);
 
 // Function to find the NSSF according to
 // the rate and also taking a maximu of 18000 on NSSF
@@ -72,9 +72,9 @@ function findnssf(gross_salary, nssf_rate = 0.06) {
   return nssf_pay;
 }
 
-// A variable that stores the return value of  findnssf() function
+// // A variable that stores the return value of  findnssf() function
 
-let calcNssf = findnssf(gross_salary, (nssf_rate = 0.06));
+// let calcNssf = findnssf(gross_salary, (nssf_rate = 0.06));
 
 // function to find the national housing development fund according to the ratea
 
@@ -83,9 +83,9 @@ function findnhdf(gross_salary, nhdfRate = 0.015) {
   return nhdf;
 }
 
-// A variable that stores the return value of  findnhdf() function
+// // A variable that stores the return value of  findnhdf() function
 
-let calcNhdf = findnhdf(gross_salary, (nhdfRate = 0.015));
+// let calcNhdf = findnhdf(gross_salary, (nhdfRate = 0.015));
 
 //  function to calculate the taxable income
 
@@ -125,15 +125,15 @@ function findPayee(taxableIncome, personalRelief = 2400) {
   }
   return netPayee;
 }
-// A variable that stores the return value of  findPayee() function
+// // A variable that stores the return value of  findPayee() function
 
-let calcPayee = findPayee(taxableIncome, personalRelief = 2400);
+// let calcPayee = findPayee(taxableIncome, personalRelief = 2400);
 
-//  A function to calculate the net_salary
-//  net_salary = gross_salary - (nhif + nhdf +  nssf + payee)
+// //  A function to calculate the net_salary
+// //  net_salary = gross_salary - (nhif + nhdf +  nssf + payee)
 
-function findNetSalary(calcGross, calcNhif, hdf, nssf_pay, netPayee) {
-  netSalary = gross_salary - (nhif + nhdf + nssf + payee);
+// function findNetSalary(calcGross, calcNhif, hdf, nssf_pay, netPayee) {
+//   netSalary = gross_salary - (nhif + nhdf + nssf + payee);
 
-  return netSalary;
-}
+//   return netSalary;
+// }

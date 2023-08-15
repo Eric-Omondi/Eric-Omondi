@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="functions.js"></script>
+    <script>
+      // Using functions continue with the same program
+      // and calculate an individual’s NHDF using:
+      //  i.e NHDF = gross_salary *  0.015
+
+      let calcGross = findgrossSalary(
+        Number(prompt("Enter the basic salary")),
+        Number(prompt("Enter benefits"))
+      );
+
+     
+      console.log("The amount for NHDF is "+ findnhdf(calcGross));
+
+     
+    </script>
+  </body>
+</html>

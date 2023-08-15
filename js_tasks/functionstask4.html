@@ -6,18 +6,12 @@
     <title>Document</title>
   </head>
   <body>
+    <script src="functions.js"></script>
     <script>
-      function mytest(num1, num2=10) {
-        let s = "my test function " + num1 +" " +
-        num2;
+      // Calculate the taxable income.
+      // i.e taxable_income = gross salary - (NSSF + NHDF)
 
-        return s;
-      }
-
-     let m = mytest(100, 50);
-     console.log(m)
-      mytest(5, "John");
-      
+      console.log(taxableIncome);
     </script>
   </body>
 </html>

@@ -15,8 +15,8 @@ let calcGross = findgrossSalary(
 
 // function to calculate the nhif according to the gross salary
 
-function findnhif(basic_salary, benefits) {
-  let gross_salary = basic_salary + benefits;
+function findnhif(basicSalary, benefits) {
+  let gross_salary = basicSalary + benefits;
 
   if (gross_salary == 5999) {
     nhif = 150;
@@ -57,7 +57,7 @@ function findnhif(basic_salary, benefits) {
 
 // A variable that stores the return value of  findnhif() function
 
-let calcNhif = findnhif(basic_salary, benefits);
+let calcNhif = findnhif(basicSalary, benefits);
 
 // Function to find the NSSF according to
 // the rate and also taking a maximu of 18000 on NSSF
@@ -132,7 +132,7 @@ let calcPayee = findPayee(taxableIncome, personalRelief = 2400);
 //  A function to calculate the net_salary
 //  net_salary = gross_salary - (nhif + nhdf +  nssf + payee)
 
-function findNetSalary(calcGross, calcNhif, CalcNhdf, calcNssf, calcPayee) {
+function findNetSalary(calcGross, calcNhif, hdf, nssf_pay, netPayee) {
   netSalary = gross_salary - (nhif + nhdf + nssf + payee);
 
   return netSalary;

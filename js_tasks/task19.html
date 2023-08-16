@@ -15,29 +15,34 @@
       // let grossPayee = paye(%) * taxableIncome
       let grossPayee;
       let personalRelief = 2400;
-      let insuranceReleif = 0.15 * nhif;
-      let taxReliefs = insuranceReleif + personalRelief;
-    
-      if (taxableIncome === 24001) {
+
+      if (taxableIncome === 24000) {
         grossPayee = 0.1 * taxableIncome;
-        netPayee = grossPayee - taxReliefs;
-      } else if (taxableIncome > 24001 && taxableIncome <= 32333) {
-        grossPayee = 0.25 * taxableIncome;
-        netPayee = grossPayee - taxReliefs;
+      } else if (taxableIncome > 24000 && taxableIncome <= 32333) {
+        taxableIncome = taxableIncome - 24000;
+        grossPayee = (8333 * 0.25) + grossPayee;
       } else if (taxableIncome > 32333 && taxableIncome <= 500000) {
-        grossPayee = 0.3 * taxableIncome;
-        netPayee = grossPayee - taxReliefs;
+        taxableIncome = taxableIncome - (8333 );
+        grossPayee = (467667 * 0.3) + + grossPayee;
       } else if (taxableIncome > 500000 && taxableIncome <= 800000) {
-        grossPayee = 0.325 * taxableIncome;
-        netPayee = grossPayee - taxReliefs;
-      } else if (taxableIncome > 800000){
-       grossPayee = 0.25 * taxableIncome;
-        netPayee = grossPayee - taxReliefs;
-      } else{
-        netPayee = 0
+        taxableIncome = taxableIncome - (467667);
+        grossPayee = (300000 * 0.325) + grossPayee;
+      } else if (taxableIncome > 800000) {
+        taxableIncome = taxableIncome - (300000);
+        grossPayee = (taxableIncome * 0.35) + grossPayee
+      } else {
+        grossPayee = 0;
       }
 
-      console.log("The taxable is: "+ taxableIncome + "<br>" + "The net payee is: "+ netPayee)
+      
+      netPayee = grossPayee - personalRelief;
+      console.log(
+        "The taxable is: " +
+          taxableIncome +
+          "<br>" +
+          "The net payee is: " +
+          netPayee
+      );
     </script>
   </body>
 </html>

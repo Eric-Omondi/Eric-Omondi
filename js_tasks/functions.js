@@ -102,25 +102,34 @@ taxableIncome = findTaxableIncome(
 
 // A function to calculate the payee
 
-function findPayee(taxableIncome, personalRelief = 2400) {
-  if (taxableIncome === 24001) {
-    grossPayee = 0.1 * taxableIncome;
-    netPayee = grossPayee - personalRelief;
-  } else if (taxableIncome > 24001 && taxableIncome <= 32333) {
-    grossPayee = 0.25 * taxableIncome;
-    netPayee = grossPayee - personalRelief;
+function findPayee(taxableIncome) {
+  let grossPayee;
+
+  if (taxableIncome < 24000) {
+    grossPayee = 0;
+  } else if (taxableIncome > 24000 && taxableIncome <= 32333) {
+    taxableIncome = taxableIncome - 24000;
+    grossPayee = 8333 * 0.25 + grossPayee;
   } else if (taxableIncome > 32333 && taxableIncome <= 500000) {
-    grossPayee = 0.3 * taxableIncome;
-    netPayee = grossPayee - personalRelief;
+    taxableIncome = taxableIncome - 8333;
+    grossPayee = 467667 * 0.3 + +grossPayee;
   } else if (taxableIncome > 500000 && taxableIncome <= 800000) {
-    grossPayee = 0.325 * taxableIncome;
-    netPayee = grossPayee - personalRelief;
+    taxableIncome = taxableIncome - 467667;
+    grossPayee = 300000 * 0.325 + grossPayee;
   } else if (taxableIncome > 800000) {
-    grossPayee = 0.35 * taxableIncome;
-    netPayee = grossPayee - personalRelief;
+    taxableIncome = taxableIncome - 300000;
+    grossPayee = taxableIncome * 0.35 + grossPayee;
   } else {
-    netPayee = 0;
+    grossPayee = taxableIncome * 0.1;
   }
+
+  if (grossPayee <= 0) {
+    netPayee = 0;
+  } else {
+    let personalRelief = 2400;
+    netPayee = grossPayee - personalRelief;
+  }
+
   return netPayee;
 }
 // // A variable that stores the return value of  findPayee() function

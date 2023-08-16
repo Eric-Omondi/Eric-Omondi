@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findPayee(taxableIncome) {
+  let grossPayee;
+
+  if (taxableIncome < 24000) {
+    grossPayee = 0.1 * taxableIncome;
+  } else if (taxableIncome > 24000 && taxableIncome <= 32333) {
+    taxableIncome = taxableIncome - 24000;
+    grossPayee = 8333 * 0.25 + grossPayee;
+  } else if (taxableIncome > 32333 && taxableIncome <= 500000) {
+    taxableIncome = taxableIncome - 8333;
+    grossPayee = 467667 * 0.3 + +grossPayee;
+  } else if (taxableIncome > 500000 && taxableIncome <= 800000) {
+    taxableIncome = taxableIncome - 467667;
+    grossPayee = 300000 * 0.325 + grossPayee;
+  } else if (taxableIncome > 800000) {
+    taxableIncome = taxableIncome - 300000;
+    grossPayee = taxableIncome * 0.35 + grossPayee;
+  } else {
+    grossPayee = 0;
+  }
+  let personalRelief = 2400;
+  netPayee = grossPayee - personalRelief;
+  return netPayee;
+}
+    </script>
+</body>
+</html>

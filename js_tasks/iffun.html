@@ -31,6 +31,34 @@
   netPayee = grossPayee - personalRelief;
   return netPayee;
 }
+
+
+
+
+function findPAYEE(taxable_income, personal_relief = 2400) {
+            netpayee = 0
+            if (taxable_income <= 24000) {
+                grosspayee = 24000 * 0.1
+                netpayee = grosspayee - personal_relief
+            } else if (taxable_income <= 32, 333) {
+                grosspayee = ((taxable_income - 24000) * 0.25) + 2400
+                netpayee = grosspayee - personal_relief
+            } else if (taxable_income <= 500000) {
+                grosspayee = ((taxable_income - 32333) * 0.30) + 4483.25
+                netpayee = grosspayee - personal_relief
+            // }else if ( taxable_income > 500000 && taxable_income <= 800000) {
+            //     grosspayee = ((taxable_income - 500000) * 0.325) + 144, 783.35
+            //     netpayee = grosspayee - personal_relief
+            } else if (taxable_income > 500000) {
+                grosspayee = ((taxable_income - 80000) * 0.35) + 4483.25
+                netpayee = grosspayee - personal_relief
+            } else {
+                netpayee = 0
+            }
+            return netpayee
+        }
+
+        
     </script>
 </body>
 </html>

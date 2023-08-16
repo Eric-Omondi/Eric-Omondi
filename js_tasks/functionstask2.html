@@ -8,28 +8,10 @@
   <body>
     <script src="functions.js"></script>
     <script>
-      // Using functions Continue with the program above,
-      // then use  the gross salary to find the NSSF.
-      // To find the Kenya NSSF Rate using.
-      //  Compute NSSF using 6% of the Gross Salary.
-      //  BUT ONLY A MAXIMUM OF 18,000 CAN BE USED IN NSSF.
+     
+    
 
-      let calcGross = findgrossSalary(
-        Number(prompt("Enter the basic salary")),
-        Number(prompt("Enter benefits"))
-      );
-      let nssf_rate;
-      function findnssf(gross_salary, nssf_rate = 0.06) {
-        nssf_pay = gross_salary * nssf_rate;
-        if (nssf_pay > 0 && nssf_pay <= 18000) {
-          nssf_pay = gross_salary * 0.06;
-        } else {
-          nssf_pay = 18000;
-        }
-        return nssf_pay;
-      }
-
-      console.log(findnssf(calcGross, nssf_rate));
+      console.log(findnssf(calcGross));
     </script>
   </body>
 </html>

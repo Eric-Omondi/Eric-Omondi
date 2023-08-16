@@ -15,9 +15,7 @@ let calcGross = findgrossSalary(
 
 // function to calculate the nhif according to the gross salary
 
-function findnhif(basicSalary, benefits) {
-  let gross_salary = basicSalary + benefits;
-
+function findnhif(calcGross) {
   if (gross_salary == 5999) {
     nhif = 150;
   } else if (gross_salary >= 6000 && gross_salary <= 7999) {
@@ -57,12 +55,12 @@ function findnhif(basicSalary, benefits) {
 
 // // A variable that stores the return value of  findnhif() function
 
-// let calcNhif = findnhif(basicSalary, benefits);
+let calcNhif = findnhif(calcGross);
 
 // Function to find the NSSF according to
 // the rate and also taking a maximu of 18000 on NSSF
 
-function findnssf(gross_salary, nssf_rate = 0.06) {
+function findnssf(calcGross, nssf_rate = 0.06) {
   nssf_pay = gross_salary * nssf_rate;
   if (nssf_pay > 0 && nssf_pay <= 18000) {
     nssf_pay = gross_salary * 0.06;
@@ -74,23 +72,23 @@ function findnssf(gross_salary, nssf_rate = 0.06) {
 
 // // A variable that stores the return value of  findnssf() function
 
-// let calcNssf = findnssf(gross_salary, (nssf_rate = 0.06));
+let calcNssf = findnssf(calcGross, (nssf_rate = 0.06));
 
 // function to find the national housing development fund according to the ratea
 
-function findnhdf(gross_salary, nhdfRate = 0.015) {
+function findnhdf(calcGross, nhdfRate = 0.015) {
   let nhdf = gross_salary * nhdfRate;
   return nhdf;
 }
 
 // // A variable that stores the return value of  findnhdf() function
 
-// let calcNhdf = findnhdf(gross_salary, (nhdfRate = 0.015));
+let calcNhdf = findnhdf(calcGross, (nhdfRate = 0.015));
 
 //  function to calculate the taxable income
 
 // i.e taxable_income = gross salary - (NSSF + NHDF)
-function findTaxableIncome(gross_salary, nssf_pay, nhdf) {
+function findTaxableIncome(calcGross, nssf_pay, nhdf) {
   let taxableIncome = gross_salary - (nssf_pay + nhdf);
   return taxableIncome;
 }
@@ -127,13 +125,21 @@ function findPayee(taxableIncome, personalRelief = 2400) {
 }
 // // A variable that stores the return value of  findPayee() function
 
-// let calcPayee = findPayee(taxableIncome, personalRelief = 2400);
+let calcPayee = findPayee(taxableIncome, (personalRelief = 2400));
 
-// //  A function to calculate the net_salary
-// //  net_salary = gross_salary - (nhif + nhdf +  nssf + payee)
+//  A function to calculate the net_salary
+//  net_salary = gross_salary - (nhif + nhdf +  nssf + payee)
 
-// function findNetSalary(calcGross, calcNhif, hdf, nssf_pay, netPayee) {
-//   netSalary = gross_salary - (nhif + nhdf + nssf + payee);
+function findNetSalary(calcGross, nhif, nhdf, nssf_pay, netPayee) {
+  netSalary = gross_salary - (nhif + nhdf + nssf_pay + netPayee);
 
-//   return netSalary;
-// }
+  return netSalary;
+}
+
+calcNetSalary = findNetSalary(
+  calcGross,
+  calcNhif,
+  calcNhdf,
+  calcNssf,
+  calcPayee
+);

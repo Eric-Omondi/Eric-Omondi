@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .table {
+        border: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="myForm">
+      <label>First Name </label>
+      <input type="text" name="fname" id="fname" />
+      <br />
+      <label>Last Name </label>
+      <input type="text" name="lname" id="lname" />
+      <br />
+      <div style="color: red; font-style: italic" id="error"></div>
+      <br />
+      <input type="submit" value="Save" id="dis_button" />
+      <br />
+      <br />
+
+      <table class="table">
+        <th>First Name</th>
+        <th>Last Name</th>
+        <tr>
+          <td id="firstname"></td>
+          <td id="lastname"></td>
+        </tr>
+      </table>
+    </form>
+    <script>
+      var first_name = document.getElementById("fname");
+      var last_name = document.getElementById("lname");
+      var button_dis = document.getElementById("dis_button");
+      var output1 = document.getElementById("firstname");
+      var output2 = document.getElementById("lastname");
+
+      function getfirst_name() {
+        output1.innerHTML = first_name.value;
+      }
+
+      function getlast_name() {
+        output2.innerHTML = last_name.value;
+      }
+
+      var myForm = document.getElementById("myForm");
+      myForm.addEventListener("submit", function (e) {
+        //Prevent the webpage from refreshing
+        e.preventDefault();
+        //Check if inputs have values
+        if (
+          document.getElementById("fname").value.length == 0 ||
+          document.getElementById("lname").value.length == 0
+        ) {
+          document.getElementById("error").innerText =
+            "Ensure all Fields are set";
+        } else {
+          document.getElementById("error").innerText = "";
+        }
+      });
+
+      dis_button.addEventListener("click", getfirst_name);
+      dis_button.addEventListener("click", getlast_name);
+    </script>
+  </body>
+</html>

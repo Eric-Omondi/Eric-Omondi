@@ -1,0 +1,41 @@
+
+.output_table {
+  border: solid;
+}
+.suc_alertmes {
+  color: green;
+}
+.err_alertmes {
+  color: red;
+}
+
+.data_row{
+  color: blue
+}
+
+
+label{
+  margin-left: 250px;
+}
+button{
+  margin-left: 350px;
+  width: 120px;
+}
+table{
+  margin-left: 230px;
+  width: 350px;
+}
+
+
+.email_label{
+  margin-left: 280px;
+}
+
+.suc_alertmes{
+  margin-left: 340px;
+  margin-top: 10px;
+}
+.err_alertmes{
+  margin-left: 340px;
+  margin-top: 10px;
+}

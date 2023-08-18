@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+   <link rel="stylesheet" href="myform.css">
+  </head>
+  <body>
+    <!-- Create an HTML file called myjsform.html. 
+    Add a form to the body with the following inputs: 
+    first_name, last_name and email. Add a submit button. 
+    Ensure you have the relevant attributes 
+    i.e name and id in the input  tags. -->
+
+    <form action="" id="details_form">
+     
+      <label>First Name:</label>
+      <input
+        type="text"
+        name="first_name"
+        id="first_name"
+        placeholder="First Name"
+      />
+      <br />
+      <br />
+      <label>Last Name:</label>
+      <input
+        type="text"
+        name="second_name"
+        id="second_name"
+        placeholder="Second Name"
+      />
+      <br />
+      <br />
+      <label class="email_label">Email:</label>
+      <input type="text" name="email" id="email" placeholder="Email" />
+
+      <br />
+      <div id="suc_alertmes" class="suc_alertmes"></div>
+      <div id="err_alertmes" class="err_alertmes"></div>
+      <br />
+      <button
+        type="submit"
+        value="Submit"
+        id="Sub_button"
+        onclick="getfirst_name(); getsecond_name(); getemail()"
+      >
+        Submit
+      </button>
+      <!-- <input type="submit" value="Submit" id="sub_button" /> -->
+      <br />
+      <br />
+      <table class="output_table">
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <tr class="data_row">
+          <td id="firname_output"></td>
+          <td id="secname_output"></td>
+          <td id="email_output"></td>
+        </tr>
+      </table>
+    </form>
+
+    <script src="myform.js"></script>
+  </body>
+</html>

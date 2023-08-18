@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+       
+    </style>
+  </head>
+  <body>
+    <article>
+      <h2>TextBox</h2>
+      <label for="tbuser">Name</label>
+      <input type="text" id="tbuser" placeholder="Enter Name" />
+      <input type="button" value="Click Me" id="btn1" />
+
+      <p id="output1" class="output"></p>
+
+      <script>
+        const txt1 = document.getElementById('tbuser');
+        const btn1 = document.getElementById('btn1');
+        const out1 = document.getElementById("output1");
+
+        function fun1() {
+          out1.innerHTML = txt1.value;
+        }
+        btn1.addEventListener("click", fun1);
+      </script>
+    </article>
+  </body>
+</html>
